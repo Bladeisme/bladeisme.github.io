@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Bladeisme">
+
+
+
+
+
+<title>Record|1-3月 | Hexo</title>
+
+
+
+    <link rel="icon" href="/bladeisme.github.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/bladeisme.github.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/bladeisme.github.io/js/script.js"></script>
+    
+    <script src="/bladeisme.github.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/bladeisme.github.io/">Bladeisme&#39;s Planet</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/bladeisme.github.io/archives">Posts</a>
+                
+                    <a class="menu-item" href="/bladeisme.github.io/category">Categories</a>
+                
+                    <a class="menu-item" href="/bladeisme.github.io/tag">Tags</a>
+                
+                    <a class="menu-item" href="/bladeisme.github.io/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/bladeisme.github.io/">Bladeisme&#39;s Planet</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/bladeisme.github.io/archives">Posts</a>
+                
+                    <a class="menu-item" href="/bladeisme.github.io/category">Categories</a>
+                
+                    <a class="menu-item" href="/bladeisme.github.io/tag">Tags</a>
+                
+                    <a class="menu-item" href="/bladeisme.github.io/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6;    // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function () {
+            tocbot.refresh(obj_merge(tocbot_default_config, { hasInnerContainers: true }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function () {
+        tocbot.init(obj_merge(tocbot_default_config, { collapseDepth: 1 }));
+    });
+
+    function expandToc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, { collapseDepth: expanded ? 1 : DEPTH_MAX }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Record|1-3月</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Bladeisme</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">四月 22, 2022&nbsp;&nbsp;23:07:37</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/bladeisme.github.io/categories/Record/">Record</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="Records-1-3月"><a href="#Records-1-3月" class="headerlink" title="Records | 1-3月"></a><font color=#417D7A>Records | 1-3月</font></h1><p>例行的书影记录。以下都摘自我的毛象嘟文。<br><br><br><br><div> </p>
+<h1 id="Jan"><a href="#Jan" class="headerlink" title="Jan."></a><font color=#417D7A>Jan.</font></h1><h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a><font color=#417D7A>电影</font><br><br></h2><p><font color=#069A8E>+ 雄狮少年，导演：孙海鹏，院线</font><br></p>
+<blockquote>
+<p>网上关于辱不辱吵得很厉害（无心参与话题，这也能辱？），但趁着这波还是看了，看之前已经预感到了会很难看，看的时候心想果然。当时在象上的吐槽：本来想看完再评论但是我看了二十分钟就开始受不住玩手机了，雄狮少年也太难看了，最佳片段不会就是片头了吧。感觉是在看十年前的万万没想到大集合,台词就是万万没想到烂梗大集合，夕阳下的奔跑，逝去的青春，只是万万没想到不是十年前的。配音比姜子牙还尬，有气无力，莫名其妙的着力点……很难说是青蛇劫起更难看还是它更难看<br><br>国产动画标配：画面不错，音乐也还可以，可是剧情真的太过简单。每次都因为是「国产动画」而去看每次看完都心想「果然是国产动画，下次再也不看了」，然后loop。<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 爱情神话，导演：邵艺辉，院线，二刷</font><br></p>
+<blockquote>
+<p>也是因为风大去看了，本人的辣评：建立在上海独立建国是众所周知的事实之上：本片很符合外地人以及上海一代移民对上海的想象，展现了导演自己的刻薄和妙语连珠，所以代表性地选择了南京西路永武路太原路外滩18号。哦，导演也不是上海人啊！<br><br>选取这些地点大概是为了可以强化对上海地刻板印象。作为商业片金句频出还是不错，感觉导演也只想拍个图一乐地商业片吧。没那么喜欢这部片，尽管我豆瓣还是打了4星，她很像我之前看见过的某写手说：这篇文讲了我的道德观。<br>个人太多主义太重远重于纯粹讲好一个故事本身。但看得出来导演表达欲很重，太想说了，其实生活中可以这样可以写小论文可以开口闭口这个那个，或许很多人会讨厌但我能理解，但这一点投射到创作中我就完全不能接受了，作品是作品。<br><br>之后的补充：因为导演很可能只是想mean一下，确实有很多金句，但更像口嗨。所以抱着图一乐的心态去看确实挺不错的，意思就是不要纠结更多，那么它就是好的。看了之后又翻了一下导演微博，看到导演说老白原型是她自己时就可以到此为止了，何况她的访谈对于女性爱情观的表达也……<br>当时看到端传媒写的关于这部电影的影评：《&lt;爱情神话&gt;评论：精准把握情绪，却什么都不敢冒犯》:“但男女這種政治身份，是無法通過經濟行為置換的，物化女性的不是金錢，而是權力。粉絲氪金並未達成「女性凝視」的效果，只是為造男神添磚加瓦也說明瞭這一點。這種層面上的男女平等，不過是消費主義的陷阱，類同上文所言「獨立」女德，最終還是為男性提供了更多益處——既沒有得到真正的平等，連傳統框架內一點補償的福利也失去了。”<br><br>四月份的补充：昨天看到柯基被打死的那条新闻直接失眠了一晚上，现在突然想起年初看的《爱情神话》，那时还可以mean一下，but it all fell down…<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 圣母，导演：保罗·范霍文</font><br></p>
+<blockquote>
+<p>我怎么记得我写过相关碎碎念可是翻不到了。是四月看到有人在说《圣母》又写的碎碎念：<br><br>圣母，我的理解是，贝内蒂塔认为自己就是基督，老院长认为宗教（信仰）是权力，她也知，同时她还知道老院长没意识到的一点：信仰就是谎言。老院长的女儿真的信神，巴托洛梅阿不信神，她单纯爱贝内蒂塔。<br><br>其实我觉得这种影片中的性爱都非为了展示获得了性快感，所以插入在这里模仿的是阴茎，但也可以不认为是插入，像以前一个老师说的，是阴道套住了阴茎。<br><br>而且虽然但是，也不用一股脑批评插入式性爱吧。它可以用这个最常见的角度诠释也可以用另一个角度来看待。也不一定和男导演&#x2F;女导演有关系。那就不能是单纯想要插入式性爱吗？<br><br>btw这里的性爱场景很难看成是性爱，呃，它实在太枯燥贫乏了。<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 房子，导演： 艾玛·德斯沃夫 &#x2F; 马克·詹姆斯·罗斯 &#x2F; 妮奇·林卓丝·冯巴 &#x2F; 帕洛玛·巴尔扎</font><br></p>
+<blockquote>
+<p>毛毡定格动画，三个小短片公用一个「房子」的主题，晚上看到第二个故事的时候默默起身开始打扫房间，虫子舞真的好掉san。总体而言电影很普通，没什么亮点，尤其是最后一个故事。<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 温柔酒吧，导演：乔治·克鲁尼</font><br></p>
+<blockquote>
+<p>普。是回忆录改编的电影，看完不禁怀疑原作究竟写得有多好才会拍成电影。电影的意义在哪里？都是展现个人成长的历程，又不如《少年时代》那样让我感动，后者是普通美国少年的成长经历，耗费十年拍成，主角们在这十年间慢慢成长，父母们变老，稀松平常的日常一分一秒过去，主角一点一点长大。《温柔酒吧》其实也是如此，却丝毫找不到共鸣的点，看着仿佛真·流水账。<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 记忆，导演：阿彼察邦·韦拉斯哈古</font><br></p>
+<blockquote>
+<p>我好像懂了，我又完全没懂！一部依赖音响设备的电影，依靠声音去追溯记忆与过去。看完后的想法：我看不懂但我大受震撼！以及：这要在国内上映得扑成什么样啊！<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 麦克白的悲剧，导演：乔尔·科恩</font><br></p>
+<blockquote>
+<p>画面很美，美术外行人看来布景挺有意思，但似乎就是照搬原作，几乎没有改编。看之前只草草看过一遍《麦克白》，也没有细细比较原作和电影有什么不同，记忆里是没什么不同。<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 摩加迪沙，导演：柳昇完</font><br></p>
+<blockquote>
+<p>看了个爽，工业产物，看之前看到有人说这是韩国《战狼》，但是它各个方面都比《战狼》好。赵寅成好帅……<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 私恋失调，导演：保罗·托马斯·安德森</font><br></p>
+<blockquote>
+<p>剧情挺无聊的，普通恋爱电影。一开始就是为了学习色彩而看的，女主角是红，男主角是蓝。不过看了之后完全忘记了这回事！总体而言一般。PS，上一次看的亚当·桑德勒主演的电影是《初恋50次》，他是不是这种电影的专业户啊。</p>
+</blockquote>
+<p><br><br></p>
+<h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a><font color=#417D7A>读书</font><br><br></h2><p><font color=#069A8E>+ 《工作、消费主义与新穷人》，[英]齐格蒙特·鲍曼，上海社会科学院出版社</font><br></p>
+<blockquote>
+<p>实不相瞒我想不起来它讲了什么了……它基于韦伯的《新教伦理与资本主义精神》，韦伯认为一开始人并不是生来就想赚更多的钱，当钱够用时人们就不会想要继续工作了，而现实并非如此。而这本书则认为我们的社会从“工业型社会”转变成了“消费型社会”，人的消费定义个人，人们的价值观也转变成了消费的价值观。后面的……想不起来了！假以时日再看一遍。翻到了当时的一点摘抄以及调侃：</p>
+<ul>
+<li>根据罗杰·苏的计算，在1850年人们70%的可支配时间都处于工作状态。……除大规模征兵（现代另一项伟大发明）外，工厂是现代社会最主要的“圆形监狱”。<i>(工作就是坐牢啊！)</i><br></li>
+<li>现代组织（包括工厂在内）的总体趋势是使人的道德情操和他们的行动无关（adiaphora），从而使他们的行为更具规律性、更容易预测，这是非理性的道德冲动不可能做到的。</li>
+</ul>
+<p>-说到已经从前现代的“生产者社会”进入了“消费者社会”，当下的消费者社会中大家最爱一句口号是“灵活”。<i>(很耳熟啊，“灵活就业”。)</i><br></p>
+<ul>
+<li>总而言之，消费美学取代了工作伦理的统治地位。对于合格的消费者来说，世界是一个充满可能性的巨型矩阵，包含着更强烈的感受和更深刻的体验。评判世间万物的标准是激发人们感受和体验的能力——唤起欲望的能力，这是消费生活中最愉悦的阶段，比欲望得到满足更令人陶醉。根据这些能力的差异，所有的人、物、事件被标记在地图上。最常用的地图是美学的，而不是认知的或道德的。<br><br>工作，更准确地说，人们从事的职业，现在不可避免地受到美学的深刻影响。如前所述，工作失去了它的特权地位，不再是自我构建和身份构建的轴心，也不再是道德关注的焦点，不再是道德改善、忏悔和救赎的必由之路。与生活中的其他活动一样，工作现在首先受到美学的审视。工作的价值取决于产生愉悦体验的能力，不能使人获得“内在满足”的工作没有价值。其他评判标准（包括所谓的道德救赎）则节节败退，无力使某些工作摆脱被美学社会视为“无用”，甚至有损身份的责难。<br></li>
+</ul>
+</blockquote>
+<p><font color=#069A8E>+ 《最蓝的眼睛》，[美] 托妮·莫里森，南海出版社</font><br></p>
+<blockquote>
+<p>不是特别喜欢这本书，当时的吐槽好像发在微博上了，不过微博删掉了，象上只翻到了一点点：<br><br>四分之一多点，反而不是很喜欢，不知道后来的作品是不是也这样，很多地方都让人觉得像是写论文：<br><br>他想xxx，但是xxxx了，为什么呢？因为xxxxxxx。<br><br>然后看到作者自己写的解释这本书的后记后我更震惊了：原来还能这样！而且除此之外，作品各方面的精密（后来翻了作者另一本书看了两眼，这就是她的语调，处女作时她就已经找到了自己书写的语调了，并且大概一直保留了下来）安排也让我感到些许不适——这种精密太明显了。<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 《萨德式女人：文化史的操练》，[英]安吉拉·卡特，南京大学出版社</font><br></p>
+<blockquote>
+<p><del>小丑角色金发甜妞！帝弥托利！</del><br></p>
+<blockquote>
+<p>这种张力的文化产物就是不好不坏的女孩，金发、丰满却不幸的圣女茱斯蒂娜的姐妹会，其中最著名的殉道者就是玛丽莲·梦露。<br><br>咱们来看看她俩有多么相似！玛丽莲·梦露是一个活生生的茱斯蒂娜。她俩都长着一双会说话、令人心动的大眼，它们是灵魂敞开的窗户；她俩令人眩目的白皙皮肤如此细腻柔嫩，似乎碰一下就会挫伤，身上长时间地带着令人兴奋的性暴力红斑。这就是绅士们偏爱金发女郎的原因。……世界上最著名的金发女郎的肉体本质是边界有点模糊的有益健康的色情，模糊的原因在于，事实上，她自己也不太确定色情是什么。这赋予她一种试探性的光辉，也使她莫名地总是更像自己的镜像而非自身。……为了知道她身处绝境的模样，你不得不去看她，而在你的内心深处这也是你想见到她的方式。男人，以及女人去看她，都是因为需要说服自己，他们自己戒绝的美丽总是给它那不幸的拥有者带来苦难。……<br><br>金发女郎体格上的脆弱当然只是表象。她必须拥有一副强健的体魄来经受住生活的打击。她的脆弱性简直就是有意识的受虐狂伪装，而受虐狂则需要无限的适应力。尽管如此，受害者还是在她的一举一动、一言一行中显示自己的脆弱。……<br><br>在这个生父不明、遍体鳞伤的孩子一点儿也不聪明，而是傻乎乎的；梦露的一个情人说，是像狐狸一样傻。这种傻并非愚蠢而是天真无邪，它是如此完美，以致在功能上与愚蠢无异；只是由于她对自己力量的无知，她才会认为自己容易受伤。由于她对自己交换价值的无知，她认为自己一钱不值。<br></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>我之前的碎碎念难道又被我删了吗？只找到了一段不算相关的：<br><br>《明智的孩子》，我就很喜欢女主说她第一次见到亲生父亲那段，坐在剧院的休息室，父亲扮演麦克白（大概），中场休息走进休息室，她激动得尿了，不过只有一点点。她有一张亲生父亲的剧照，把他当作自己的初恋情人看。现在七八十了，她才知道孪生妹妹竟然也偷偷藏了一张亲生父亲的照片没告诉她！<br><br>后面看《萨德式女人》，卡特写那一段，朱莉爱特的父亲抛弃了她和妹妹，如今父亲落魄了，悔改了，成了一个善良的老男人，又来找她。朱莉爱特诱奸了父亲，和父亲做了爱，怀上了他的儿子，然后她杀了父亲，迅速流掉了孩子。“于是她通过一整套系统的仪式性的越轨摆脱了父权罩在她头上的幽灵。”马上把这一段拍给当初听了明智的孩子这几段也拍手叫绝的朋友看看。<br><br>明智的孩子与萨德式女人大概互为注脚。朵拉与诺拉或许也部分汲取自朱莉爱特与朱斯蒂娜这一对孪生姐妹。<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 《不对称》，[美] 莉萨·哈利迪，河南文艺出版社</font><br></p>
+<blockquote>
+<p>只找到了一句关于本书的嘟：看了20页，有点后悔买了这本书……</p>
+</blockquote>
+<p><br><br><br></div></p>
+<div> 
+
+<h1 id="Feb"><a href="#Feb" class="headerlink" title="Feb."></a><font color=#417D7A>Feb.</font></h1><h2 id="电影-1"><a href="#电影-1" class="headerlink" title="电影"></a><font color=#417D7A>电影</font><br><br></h2><p><font color=#069A8E>+ 玫瑰岛的不可思议的历史，导演：希德尼·希比利亚</font></p>
+<blockquote>
+<p>明明是很不错的题材，却拍得这么普。精简的总结对话：“网飞出品”“我懂了！”<br><br>连原型那句“意大利唯一赢过的战争”都没出现。这可是1968年诶！和朋友总结只剩下了一句“画面挺好看”，这句话之于电影，是否正如“可爱&#x2F;老实”之于一个人……</p>
+</blockquote>
+<p><font color=#069A8E>+ 薄荷糖，导演：李沧东</font><br></p>
+<blockquote>
+<p>随着列车的不断向前，人生却不断回溯。简单而又克制地回溯了一个堕落地“坏人”是如何变成这样的。注意到1984年那段有一幕车站的站牌上写着“光州”（也许是看错），1980年不确定，但这个时候光州正好发生了很著名的民主起义……不过整个执政期都不太平就是了，一直在戒严镇压。<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 狗镇，导演：拉斯·冯·提尔</font><br></p>
+<blockquote>
+<p>本人辣评：没看过这么难看的电影。看到后来实在忍不住快进了，哪怕快进也还是觉得痛苦。导演用自身证明结局说法。</p>
+</blockquote>
+<p><font color=#069A8E>+ 偶然与想象，导演：滨口龙介</font><br></p>
+<blockquote>
+<p>比起《驾驶我的车》更喜欢这部。当然理由可以更简单。第一个故事：我去，这人好帅啊，查查是谁，是中岛步！</p>
+</blockquote>
+<p><font color=#069A8E>+ 暗处的女儿，导演：玛吉·吉伦哈尔</font><br></p>
+<blockquote>
+<p>又是一部费兰特。刚想吐槽都2021年了电影里的小女孩还是总是拿着洋娃娃，就发现原来是费兰特的电影。她作品里娃娃出现的太多了，总是伴随着丢失，好像也意味着母亲的缺失，母女关系的破裂。<br><br>《成年人的谎言生活》和《暗处的女儿》简直就那不勒斯四部曲的一部分，从中截取了莱农的一部分稍作改变就成了另一本。暗处的女儿没看原作，看到有人说四部曲中莱农的出轨原因之一是她经历了阶级跃迁陷入了而迷茫与困惑，而暗处的女儿中这个女教授只是纯粹的出轨，其实并不正确，很显然女文学教授是另一个莱农，可能是这位观众没有仔细看，当她离开了三年又回来、和前夫争吵时，前夫说得把两个女儿送走，他承受不住，把两个孩子送去外婆家，女主说绝对不可能，我才从那个粪坑里爬出来，你让我把女儿送回去？<br><br>她笔下的女性或多或少都经历这样一种跃迁，莱农与暗处的女儿的女主是自下往上，而成年人的谎言生活是自上往下。其实都差不太多。只是四部曲更加翔实丰富，也更能打动人，而另外两部作品（暗处的女儿也有导演的问题，毕竟我没看过原作）看着则是已经熟悉了这种套路之后为了应付合同而写出来的，正如后来莱农做的那样，起先她写了两本书，受到了广泛的关注，而在那么多事情结束之后，她又稳定下来，生活变成了一个又一个的截稿期，但她后来的作品，似乎都不再被提到，几十年后她与她的作品已经逐渐被遗忘了。<br><br>这应该是她感兴趣的事，女性的性、婚姻、与母亲的关系，对爱情的渴求源于对自己的不自信（？），是她认为的女性是如何被塑造出来的以及如何“走出来”，同时也是她所经历的事：凭借读书而获得了阶级的跃迁。毕竟，现在的她也正是一名作家。也许她的作品就是写了一部分的自己，并不断重复书写。<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 边境杀手，导演：丹尼斯·维伦纽瓦</font><br></p>
+<blockquote>
+<p>翻看之后发现我记下来的是：维伦纽瓦的电影很难在电脑上观看，经常黑漆漆一片……<br>总体我还是挺喜欢的，不是那么传统，女主是「理想主义」，所以她永远被排斥、被挤兑，她更弱小、迷惑，总是失败、失败，一事无成。</p>
+</blockquote>
+</div><br><br>
+
+<h2 id="读书-1"><a href="#读书-1" class="headerlink" title="读书"></a><font color=#417D7A>读书</font><br><br></h2><p><font color=#069A8E>+ 《鹿川有许多粪》，[韩]李沧东，武汉大学出版社</font><br></p>
+<blockquote>
+<p>《素食者》也是，文字非常粗糙，已经过了我能接受的范围。李沧东竟然觉得相对好些，有我个人滤镜在吧。学运似乎是他常用的一个议题。<br><br>之后的补充：现在又可以接受这些粗糙的文字了。因为它们写下的是真实的痛苦，因此无论是何种水平的文字，都应该被接受。<br></p>
+</blockquote>
+<p><font color=#069A8E>+ 《经典电影学导论》[美]达德利·安德鲁，世界图书出版公司</font><br><br><font color=#069A8E>+ 《林荫幽静》[俄]伊凡·蒲宁，漓江出版社</font><br></p>
+<blockquote>
+<p>拿到后立刻翻到了著名（代餐）片段那一篇进行阅读：</p>
+<blockquote>
+<p>当年我曾轻率地说，他若死了，我就活不下去。可是他死了，我却照样活了下来。但是每当我回忆起此后所经历的一切时，我总是问自己：我一生中究竟有过什么东西呢？我回答自己：有过的，只有过一件东西，就是那个寒秋的夜晚。世上到底有过他这么个人吗？有过的。这就是我一生中所拥有的全部东西，而其余的不过是一场多余的梦。我相信，热忱地相信：他正在那个世界的什么地方等候着我——还像那个晚上那么年轻，还像那个晚上那样爱着我。“你该活下去，享受人间的欢乐，然后才到我这里来……”我算是活过了，也算是享受过了人间的欢乐，现在该快点儿到他那里去了。(《寒秋》)</p>
+</blockquote>
+</blockquote>
+<p><br><br><br></p>
+<div>
+
+<h1 id="Mar"><a href="#Mar" class="headerlink" title="Mar."></a><font color=#417D7A>Mar.</font></h1><h2 id="电影-2"><a href="#电影-2" class="headerlink" title="电影"></a><font color=#417D7A>电影</font><br><br></h2><p><font color=#069A8E>+ 《不良教育》，导演：佩德罗·阿莫多瓦</font><br></p>
+<blockquote>
+<p>典型的阿莫多瓦，他关注的那些主题。总觉得他的电影似乎讲起故事来很随意，相对平铺直叙，就这样开始了，干脆利落地进入下一段，也没有特别技巧性地转折转场。但这一部则是几个故事相互嵌套，现实-电影中的电影，随着电影的推进，故事慢慢展现出来。还相当喜欢他的一点是他电影里的女人都很有意思。这部电影还讲到了一些：主角之一问，要如何演一个变性人？他去询问一个酒吧里的“变装皇后”，说：你们不就是异装癖的变态。对方说：我就是个女人。<br><br>之后打过一大串关于如何判断一个人是男人还是女人的疑惑，当然是在二元性别论下的，最后还是删掉了。</p>
+</blockquote>
+<p><font color=#069A8E>+ 《犬之力》，导演：简·坎皮恩</font><br></p>
+<blockquote>
+<p>看犬之力，没开全屏所以注意了一下时间，第一部分很干脆，17分钟里就交代清楚了背景，四个主要人物性格、人物之间的关系都出来了。而且觉着这个电影也很适合画框中的画框。<br><br>不是我会非常喜欢的作品，但不得不承认导演真的很强。</p>
+</blockquote>
+<p><font color=#069A8E>+ 《新蝙蝠侠》，导演：马特·里夫斯</font><br></p>
+<blockquote>
+<p>没看过漫画的纯路人，感觉还挺好看的。但是在电影院看也好黑，黑到后面什么也看不见，然后火炬出现了，自由领导人民，还是有笑出声……以及我非常不能理解的：为什么有三小时这么长？为什么有三小时这么长？看完后直接腰肌劳损复发。<br><br><font color=#069A8E>+ 《赴汤蹈火》，导演：大卫·马肯兹</font><br><br>编剧也是泰勒·谢里丹耶！也是《边境杀手》的编剧，好吧其实我不知道他。电影我看了个爽。最初是因为Ben Forster想看，后来发现也有Chris Pine，还蛮不同的Chris Pine。看之前就决定不去思考它表达揭示了什么了，纯粹当成了一个爽片看，于是看了个爽。</p>
+</blockquote>
+<p><br><br></p>
+<h2 id="读书-2"><a href="#读书-2" class="headerlink" title="读书"></a><font color=#417D7A>读书</font><br><br></h2><p><font color=#069A8E>+ 《现代性的性别》， [美]芮塔·菲尔斯基 (Rita Felski)，南京大学出版社</font><br></p>
+<blockquote>
+<p>从文学的角度探讨现代性，总结就是反驳了现代性是“男性”的言论，即认为现代性是女性的（现代性的一个特点是“模糊”）。<br><br>一点支离破碎的摘抄和碎碎念，与本书的主题没多大的关系：</p>
+<blockquote>
+<ul>
+<li>近些年来，女性主义提出了一套广泛的批判学说，所针对的就是这种独立自主的男性主体的理想化再现。这种批判的观点是，理想化的自由本身携带着控制的欲望因子，它想要控制他者，惧怕依附性，因为后者与女性气质联系在一起。<br></li>
+<li>“怀旧是和乌托邦同时产生的。对未来的另一种想象，就是想象中的过去。”对过去的渴望，不是无历史的、单一的恒定之事，而是随着社会和文化的变化而变化，它是特定的运动和变革经验的产物。<br><br><i>这句因为想到了《乡愁》，nostalgic（包括nostalgia ）是不是还有一种“近乡情怯”的意思，同时怀的并不是真正的故乡，而是一种“理想化的过去”，即构造出来的，不可达到的理想乡，同时也是对现在的反抗，一种政治性的对抗。<br><br>而这一章，没记错的话，讲的是文学中的女性形象，带有一种乌托邦的感觉（母亲），是回不去的、想象的家园。</i></li>
+<li>在这里，我反对的不是这些评论家谨慎地将作品语境化的做法，而是不同意这种语境化所隐含的假设，即女性书写不应该受到任何批评。虽然女性主义对女性书写的肯定具有一定的战略价值，但这类作品的女性气质和大众化特征无法确保它们的真实性，也无法确保对于权力关系的超越。<br><br><i>基本不看原耽，所以仅局限于同人文，我看女性写男同同人文的心态。</i></li>
+<li>颓废派作家采用并认可了性向与生殖分离的观点；性是风格化的，美学化的，能够转变成独立的、自我合法的景观。现如今，性向与文学往往相提并论，其历史根源就在于欲望的美学化，在于自由流淌的色情主义与孤芳自赏的诗学之间的相似性。正如本章的引语所言，性变态就这样被概念化为一种准康德式的、无目的的快感美学之域，抵制专制的工具性和功能性。然而，拒绝目的本身必然就是一种目的，在社会关系的力场（force field）上获得了某种意义和功能。在性变态领域，就像在美学中一样，任何破坏在某种意义上说都是对权力差异的重写。</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><font color=#069A8E>+ 《叫魂》，[美]孔飞力，生活·读书·新知三联书店 上海三联书店</font><br></p>
+<blockquote>
+<p>继续一些支离破碎的摘抄：</p>
+<blockquote>
+<ul>
+<li>前额削发比之背后蓄辫包含着更大的耻辱。当时人也许曾由削发而联想到阉割——这上面并没有直接的证据——因为在旧体制下，男子的人格（也是男主社会上层人士的地位）是以精心蓄留的长发为象征的。<br><br><i>这只是其中一种理论，只是看到这里的时候脑子里忍不住冒出了：？<br><br>写削发这一段提到了另一个学者对此的研究，一种理论是儒家文化认为身体发肤受之父母，削发是一种侮辱。而且长久以来，削发与惩罚便联系在一起，长久程度可能是从帝制出现开始就有关联了。不仅是在中国，国外骑士团等对头发也有相关的文化。但看到这段时想到的是玛莲娜里玛莲娜自己剪头发然后染发，被镇上的女人们剪去头发，最后头发恢复了原本的颜色回来。诚然也是一种象征。不过削发这里看来或许本来与性别无关，是到更近的时代才开始分化的（？</i></li>
+<li>而且观乾隆对种族危机的处理方式，对更明显更具威胁性的问题视而不见，对之谨小慎微，而对威胁性更小的入手开展文字狱，一切解释权在他手中，他自由地操控文字狱的范围和程度。<br>对江南地区，同时认为这是汉人文化的结晶，江南地区的文化是最高水准，十分优雅，但同时也认为其最腐败堕落。<br></li>
+<li>施行妖术和提出妖术指控所折射反映出来的是人们的无权无势状态。对一些无权无势的普通民众来说，弘历得清剿给他们带来了慷慨的机会。<br><br><i>看到这里时上海似乎快封了，3月22日，之后有太多幻觉权力的例子了。想到这个失去了评价的能力，只想说过去这么久了（距离这本书出版也有30年了），一点也没有变。</i></li>
+<li>即使在今天，让普通民众享有权力仍是一个还未实现的许诺。毫不奇怪，冤冤相报（这是“受困扰社会”中最为普遍的社会进攻方式）仍是中国社会生活的一个显著特点。<br></li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>叫魂这本书真的很好看，诚心忏悔，大学时没有看……有趣，易读，学术性也强。作者真的不愧是中国文化专家，翻译也很流畅。拿猎巫和叫魂比很不恰当，因为猎巫是非虚构，而叫魂是社会历史学学术专著，两者对现象的总结推演能力肯定不一样。而猎巫既然是非虚构……我其实不知道该以什么心态阅读非虚构，基于真实故事、补充了许多细节的小说吗？猎巫看起来真的只是像一本小说。而可读性又不如冷血。</p>
+</blockquote>
+</div>
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Bladeisme</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://github.com/Bladeisme/bladeisme.github.io/2022/04/22/Record1-3%E6%9C%88/">https://github.com/Bladeisme/bladeisme.github.io/2022/04/22/Record1-3%E6%9C%88/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>卡哇1教传教大使</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/bladeisme.github.io/tags/Record/"># Record</a>
+                    
+                        <a href="/bladeisme.github.io/tags/%E8%AF%BB%E4%B9%A6/"># 读书</a>
+                    
+                        <a href="/bladeisme.github.io/tags/%E7%94%B5%E5%BD%B1/"># 电影</a>
+                    
+                        <a href="/bladeisme.github.io/tags/%E6%91%98%E6%8A%84/"># 摘抄</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/bladeisme.github.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/bladeisme.github.io/2022/04/22/hell-world/">hell_world</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Bladeisme | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
